@@ -1,0 +1,7 @@
+1: Verify the effect of creating a replicaset in the pods that are running. Also, what is the effect of scaling the service in the output of your service (e.i. when you curl your service’s External IP Address)? Explain why you observe this behavior.
+
+
+Answer:
+	When scaling the service using replicas, we can see that the service is distributed to 3 different pods. Now when you run the command
+	curl http://<Your ip-address>
+ we can see that our return name changes, choosing between the sets of pods through the loadbalancer.
